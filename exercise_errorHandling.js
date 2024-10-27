@@ -8,3 +8,7 @@ function mysteryOperation() {
     throw new Error("The operation is failed mysteriously!");
   }
 }
+
+const daysOnSuccess = 13;
+const daysOnFailure = 1;
+const daysOnAttendance = 20;
