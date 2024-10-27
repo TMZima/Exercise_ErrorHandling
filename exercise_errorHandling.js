@@ -9,6 +9,23 @@ function mysteryOperation() {
   }
 }
 
+const numberOfOperations = 20;
+
 const daysOnSuccess = 13;
 const daysOnFailure = 1;
-const daysOnAttendance = 20;
+const daysOnAttendance = 3;
+
+let daysEarned = 0;
+
+for (let i = 0; i < numberOfOperations; i++) {
+  try {
+    mysteryOperation();
+    daysEarned += daysOnSuccess;
+  } catch (error) {
+    daysEarned += daysOnFailure;
+  } finally {
+    daysEarned += daysOnAttendance;
+  }
+}
+
+console.log("Vacation days earned:", daysEarned);
